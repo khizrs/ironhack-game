@@ -6,6 +6,19 @@ const data = [
   {id: 3, name: 'Paris', image :'3.jpg', lat: 48.864716  , lng: 2.349014}
 ]
 
+var sec = 15;
+var time = setInterval(myTimer, 1000);
+
+function myTimer() {
+    document.getElementById('timer').innerHTML = sec + "sec left";
+    sec--;
+    if (sec == -1) {
+        clearInterval(time);
+        alert("Time out!! :(");
+        location.reload();
+
+    }
+}
 
 var score = 0
 var currentIndex =0;
