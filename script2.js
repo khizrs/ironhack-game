@@ -1,9 +1,9 @@
 let map;
 
 const data = [
-  {id: 1, name: 'Cairo', image :'1.jpg' , lat: 30.033333, lng: 31.233334 },
-  {id: 2, name: 'Rio', image :'2.jpg', lat: -22.908333, lng: -43.196388},
-  {id: 3, name: 'Paris', image :'3.jpg', lat: 48.864716  , lng: 2.349014}
+  {id: 1, name: 'Cairo', image :'./1.jpg' , lat: 30.033333, lng: 31.233334 },
+  {id: 2, name: 'Rio', image :'./2.jpg', lat: -22.908333, lng: -43.196388},
+  {id: 3, name: 'Paris', image :'./3.jpg', lat: 48.864716  , lng: 2.349014}
 ]
 
 var sec = 15;
