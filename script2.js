@@ -15,10 +15,15 @@ const sc = document.getElementById('score')
 function selectNext(){
   currentIndex = (currentIndex +1) % data.length
   currentImg.src=data[currentIndex].image
+  
 }
 
-function cityClicked(choosenCity) {
 
+
+function cityClicked(choosenCity) {
+  if (currentIndex  >= 2) {
+    window.alert("End of Game! Your score is " + score);
+  }
   const currentCity = data[currentIndex]
   console.log(choosenCity, currentCity )
   if(currentCity != choosenCity) {
@@ -29,17 +34,22 @@ function cityClicked(choosenCity) {
 
   sc.innerText = score 
 
-  if(score > 100) {
+  if(score > 5) {
     alert(' TADA !!!')
   }
   selectNext()
+  
 }
 
 function initMap() {
   map = new google.maps.Map(document.getElementById("map"), {
     center: { lat: 0, lng: 0 },
     zoom: 3,
-    styles: [{"featureType":"all","elementType":"labels.text","stylers":[{"visibility":"off"}]},{"featureType":"all","elementType":"labels.icon","stylers":[{"visibility":"off"}]}]
+    // styles: [{"featureType":"all","elementType":"labels.text","stylers":[{"visibility":"off"}]},{"featureType":"all","elementType":"labels.icon","stylers":[{"visibility":"off"}]}],
+    // backgroundColor:"#eeeeee",
+    mapId: '2793e25c75451b76'
+
+
   });
 
 
@@ -49,8 +59,10 @@ function initMap() {
     const marker = new google.maps.Marker({
       position: pos,
       map: map,
+      
     });
     marker.addListener('click', ()=> cityClicked(city))
+    
   })
 
   

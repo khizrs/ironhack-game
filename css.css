@@ -28,3 +28,9 @@ img.mp {
     gap: 10px;
     margin: 10px;
   }
+body {
+  background: black;
+}
+h1{
+  color: white;
+}
