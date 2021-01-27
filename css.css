@@ -1,40 +1,104 @@
-img.mp {
-    width: 500px;
-    height: 300px;
-  }
-
-  #map {
-    height: 700px;
-    width: 1000px;
-  }
-  
-  /* Optional: Makes the sample page fill the window. */
-  html,
-  body {
-    height: 100%;
-    margin: 0;
-    padding: 0;
-    width: 1500px;
-  }
-
-  #currentImg {
-    max-width: 512px;
-  }
-
-  #container {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    gap: 10px;
-    margin: 10px;
-  }
 body {
-  background: black;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100vw;
+  padding: 0;
+  margin: 0;
+  background: #eee;
+  font-family: 'Roboto Slab', serif;
+
 }
-h2 {
-  color: white;
+header {
+  background: linear-gradient(to bottom, #ccc, #eee); 
+  text-shadow: 1px 1px #fff;
+  margin: 0;
+}
+header h1 {
+  display: inline-block;
+  text-indent: 2em;
+  padding: 0.25em 2em 0.25em 0.5em;
+  background: white;
+  border-radius: 0 120px 20px 0;
+  box-shadow: 2px #3c3c3c;
 }
 
-h1 {
-  color: white;
+
+aside { 
+  margin: 0 1em 0 0;
+  background: white;
+  border-radius:  0 5px 5px 0;
+  min-width: 256px;
+}
+
+aside.game {
+  display: none;
+}
+
+aside.control {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.started aside.game {
+  display: block;
+}
+
+.started aside.control {
+  display: none;
+}
+
+#container {
+  display: flex;
+  flex:1;
+  padding: 1em;
+}
+
+#map {
+  flex:1;
+  border-radius:  5px 0  0 5px;
+}
+
+#currentImg {
+  max-width: 348px;
+  max-height: 400x;
+  z-index: 1;
+}
+aside .content {
+  padding: 1em;
+}
+#map , aside { 
+  box-shadow: 0 0 2px #ececec;
+  overflow: hidden;
+}
+
+
+#game-over {
+  transition: 1s;
+  position: absolute;
+  background: rgba(0,0,0,.5);
+  backdrop-filter: blur(10px);
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  z-index: 9999;
+  display: none;
+  align-items: center;
+  justify-content: center;
+}
+
+
+#game-over.active {
+  display: flex;
+}
+
+#game-over > div {
+  background: white;
+  padding: 1em;
+  min-width: 400px;
+  min-height: 256px;
+  box-shadow: 0 0 2px #000,0 5px 4px #333;
+  border-radius: 15px;
 }
