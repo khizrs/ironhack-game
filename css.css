@@ -39,6 +39,19 @@ aside.control {
   display: flex;
   align-items: center;
   justify-content: center;
+  background-color: #ececec;
+  
+}
+
+button {
+  background-color: #0000009d; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
 }
 
 .started aside.game {
@@ -74,7 +87,7 @@ aside .content {
 }
 
 
-#game-over {
+#game-over, #game-won {
   transition: 1s;
   position: absolute;
   background: rgba(0,0,0,.5);
@@ -90,11 +103,11 @@ aside .content {
 }
 
 
-#game-over.active {
+#game-over.active, #game-won.active {
   display: flex;
 }
 
-#game-over > div {
+#game-over > div, #game-won > div {
   background: white;
   padding: 1em;
   min-width: 400px;

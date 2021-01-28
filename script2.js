@@ -41,14 +41,17 @@ function selectNext(){
 
 function cityClicked(choosenCity) {
   if (currentIndex  >= 2) {
-    window.alert("End of Game! Your score is " + score);
+    document.getElementById('gomsg').innerHTML = 'Thanks for playing! Your score is ' + score;
+    document.getElementById('game-won').className  = "active";
+    
   }
   const currentCity = data[currentIndex]
   console.log(choosenCity, currentCity )
   if(currentCity != choosenCity) {
-    window.alert("Wrong");
+    document.getElementById('rightwrong').innerHTML = 'That is wrong, Sorry!';
   }else { 
     score += 1
+    document.getElementById('rightwrong').innerHTML = 'That is right, well done!!'
   }
 
   sc.innerText = score 
