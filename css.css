@@ -39,7 +39,7 @@ aside.control {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #ececec;
+  background-color: #3c3c3c;
   
 }
 
@@ -58,7 +58,7 @@ button {
   display: block;
 }
 
-.started aside.control {
+.started aside.control { 
   display: none;
 }
 
@@ -114,4 +114,28 @@ aside .content {
   min-height: 256px;
   box-shadow: 0 0 2px #000,0 5px 4px #333;
   border-radius: 15px;
+}
+
+
+.indextitle {
+  
+
+display: flex;
+flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  align-content: stretch;
+
+  
+}
+
+.title {
+  font-family: 'Roboto Slab', serif;
+  font-size: 3em;
+
+}
+
+.luck {
+  max-width: 300px;
 }
