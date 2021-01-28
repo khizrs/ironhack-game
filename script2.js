@@ -43,8 +43,7 @@ function myTimer() {
     if (sec == -1) {
         clearInterval(time);
         document.getElementById('game-over').className  = "active"
-    // document.getElementById('gameovermsg').innerHTML = 'Sorry the game is over!';
-        // location.reload();
+
 
     }
 }
@@ -97,8 +96,7 @@ function initMap() {
   map = new google.maps.Map(document.getElementById("map"), {
     center: { lat: 0, lng: 0 },
     zoom: 3,
-    // styles: [{"featureType":"all","elementType":"labels.text","stylers":[{"visibility":"off"}]},{"featureType":"all","elementType":"labels.icon","stylers":[{"visibility":"off"}]}],
-    // backgroundColor:"#eeeeee",
+  
     mapId: '2793e25c75451b76'
 
 
@@ -122,10 +120,3 @@ function initMap() {
 
 
 selectNext()
-// const uluru = { lat: -25.344, lng: 131.036 };
-// const marker = new google.maps.Marker({
-//     position: uluru,
-//     map: map,
-//   });
-
-// console.log('google')
